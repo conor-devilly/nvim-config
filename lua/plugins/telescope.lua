@@ -5,6 +5,7 @@ return {
         dependencies = {
             "nvim-telescope/telescope-ui-select.nvim",
             "nvim-telescope/telescope-file-browser.nvim",
+            "nvim-telescope/telescope-dap.nvim",
             "nvim-lua/plenary.nvim",
         },
 
@@ -22,6 +23,7 @@ return {
             })
             require("telescope").load_extension("ui-select")
             require("telescope").load_extension("file_browser")
+            require("telescope").load_extension("dap")
 
             vim.keymap.set("n", "<leader>ff", builtin.find_files)
             vim.keymap.set("n", "<C-f>", builtin.find_files)
