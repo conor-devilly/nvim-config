@@ -25,6 +25,7 @@ return {
                 cmp_lsp.default_capabilities()
             )
 
+
             -- Setup completions
             local cmp_select = { behavior = cmp.SelectBehavior.Select }
             cmp.setup({
@@ -74,6 +75,10 @@ return {
                     end,
                 },
             })
+
+            -- Enable diagnostics
+            vim.diagnostic.config({ virtual_text = true })
+            vim.diagnostic.enable(true)
 
             -- Setup keybinds
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
